@@ -1,0 +1,38 @@
+{
+  "name": "genpark-ai-code-review-sandbox-execution-verifier-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - AI code reviewer that actually sandboxes and executes the PR diff to verify correctness before merge.",
+  "author": "genpark",
+  "category": "engineering",
+  "tags": [
+    "code-review",
+    "sandbox-execution",
+    "pr-verifier",
+    "ai-reviewer",
+    "ito"
+  ],
+  "inputs": {
+    "pr_diff_text": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "execution_status": {
+      "type": "string"
+    },
+    "bugs_found": {
+      "type": "array"
+    },
+    "review_verdict": {
+      "type": "string"
+    },
+    "auto_fix_suggestion": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
